@@ -49,12 +49,17 @@ elif menu == "Modèle de Prédiction":
     sex = st.selectbox("Genre", ["Femme", "Homme"])
     pneu = st.checkbox("Pneumonie ?")
     diab = st.checkbox("Diabète ?")
-    hip = st.checkbox("hypertension ?")
-    
+    hip = st.checkbox("Hypertension ?")
+    cardio = st.checkbox("Maladies cardiovasculaires ?")
+    obe = st.checkbox("Obésité ?")
+    renal = st.checkbox("Insuffisance rénale chronique ?")
+    tab  = st.checkbox("Tabagisme ?")
+    ast = st.checkbox("Asthme ?")
     
     if st.button("Prédire le Risque"):
         # Ici on pourrait appeler le modèle entraîné à l'étape 5
         if age > 60 or pneu:
             st.error("⚠️ Ce patient est considéré à HAUT RISQUE.")
         else:
+
             st.success("✅ Ce patient est considéré à BAS RISQUE.")
